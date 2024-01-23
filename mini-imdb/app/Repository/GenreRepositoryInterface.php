@@ -2,6 +2,9 @@
 
 namespace App\Repository;
 
+use App\Http\Requests\StoreGenreRequest;
+use App\Http\Requests\UpdateGenreRequest;
+
 interface GenreRepositoryInterface
 {
     public function getAllGenres();
