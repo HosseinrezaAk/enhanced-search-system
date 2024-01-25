@@ -11,7 +11,7 @@ class Genre extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name'
+        'title'
     ];
 
     public function movies(): HasMany
