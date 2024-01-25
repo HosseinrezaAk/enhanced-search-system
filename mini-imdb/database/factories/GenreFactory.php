@@ -17,7 +17,7 @@ class GenreFactory extends Factory
     public function definition(): array
     {
         return [
-            'title'
+            'title'=> fake()->unique()->randomElement(['Action', 'Drama','Comedy']),
         ];
     }
 }

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('family');
             $table->string('role');
-            $table->dateTime('birthdate');
+            $table->date('birthdate');
             $table->timestamps();
         });
     }

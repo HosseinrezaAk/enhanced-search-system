@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('genre_id');
             $table->string('title');
-            $table->date('year');
+            $table->year('year');
             $table->float('rank');
             $table->text('description');
             $table->timestamps();
