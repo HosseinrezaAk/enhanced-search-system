@@ -4,6 +4,7 @@ namespace App\Repositories\Genre;
 
 use App\Http\Requests\StoreGenreRequest;
 use App\Http\Requests\UpdateGenreRequest;
+use App\Models\Genre;
 use App\Repositories\Genre\GenreRepositoryInterface;
 
 class GenreRepository implements GenreRepositoryInterface
@@ -11,26 +12,38 @@ class GenreRepository implements GenreRepositoryInterface
 
     public function getAllGenres()
     {
-        // TODO: Implement getAllGenres() method.
+        return Genre::all();
     }
 
+    public function createGenre(array $genreData)
+    {
+        return Genre::create($genreData);
+    }
     public function getGenreById($genreId)
     {
-        // TODO: Implement getGenreById() method.
+       return Genre::findOrFail($genreId);
     }
 
-    public function deleteGenre($genreId)
+    public function updateGenre($genreId, array $genreData)
     {
-        // TODO: Implement deleteGenre() method.
+        $genre = Genre::findOrFail($genreId);
+        $genre->update($genreData);
+        return $genre;
+    }
+    public function deleteGenre($genreId): bool
+    {
+        $genre = Genre::findOrFail($genreId);
+
+        if ($genre->movies()->count() > 0) {
+            return false;
+        }
+
+        $genre->delete();
+        return true;
+
     }
 
-    public function createGenre(StoreGenreRequest $request)
-    {
-        // TODO: Implement createGenre() method.
-    }
 
-    public function updateGenre($genreId, UpdateGenreRequest $request)
-    {
-        // TODO: Implement updateGenre() method.
-    }
+
+
 }

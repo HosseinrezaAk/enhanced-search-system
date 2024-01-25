@@ -8,9 +8,9 @@ use App\Http\Requests\UpdateGenreRequest;
 interface GenreRepositoryInterface
 {
     public function getAllGenres();
-    public function createGenre(StoreGenreRequest $request);
+    public function createGenre(array $genreData);
     public function getGenreById($genreId);
-    public function updateGenre($genreId, UpdateGenreRequest $request);
+    public function updateGenre($genreId, array $genreData);
     public function deleteGenre($genreId);
 
 

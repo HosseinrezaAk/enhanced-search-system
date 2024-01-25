@@ -21,7 +21,7 @@ class CrewRepository implements CrewRepositoryInterface
     }
     public function getCrewById($crewId)
     {
-        return Crew::findOrfail($crewId);
+        return Crew::findOrFail($crewId);
     }
 
     public function updateCrew($crewId, array $crewData)
