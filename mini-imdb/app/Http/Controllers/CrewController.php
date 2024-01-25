@@ -69,7 +69,7 @@ class CrewController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($crewId)
+    public function destroy($crewId): JsonResponse
     {
 
         $this->crewRepository->deleteCrew($crewId);
