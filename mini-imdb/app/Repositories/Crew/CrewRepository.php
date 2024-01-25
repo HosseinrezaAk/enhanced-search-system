@@ -14,12 +14,22 @@ class CrewRepository implements CrewRepositoryInterface
     {
         return Crew::all();
     }
-
+    public function createCrew(array $crewData)
+    {
+        return Crew::create($crewData);
+    }
     public function getCrewById($crewId)
     {
         return Crew::findOrfail($crewId);
     }
 
+    public function updateCrew($crewId, array $crewData)
+    {
+        $crew = Crew::findOrFail($crewId);
+        $crew->update($crewData);
+        return $crew;
+
+    }
     public function deleteCrew($crewId)
     {
         $crew = Crew::findOrFail($crewId);
@@ -27,15 +37,4 @@ class CrewRepository implements CrewRepositoryInterface
         $crew->delete();
     }
 
-    public function createCrew(array $crewData)
-    {
-        return Crew::create($crewData);
-    }
-
-    public function updateCrew($crewId, array $crewData)
-    {
-        $crew = Crew::findOrFail($crewId);
-        return $crew->update($crewData);
-
-    }
 }

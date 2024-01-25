@@ -34,14 +34,9 @@ class CrewController extends Controller
      */
     public function store(StoreCrewRequest $request): JsonResponse
     {
-        $crewData = $request->only([
-            'name',
-            'family',
-            'role',
-        ]);
 
         return response()->json([
-            'result' => $this->crewRepository->createCrew($crewData)
+            'result' => $this->crewRepository->createCrew($request->all())
         ],
             Response::HTTP_CREATED
         );
@@ -63,10 +58,11 @@ class CrewController extends Controller
      */
     public function update(UpdateCrewRequest $request, $crewId)
     {
-        $crewData = $request->all();
+
 
         return response()->json([
-            'result' => $this->crewRepository->updateCrew($crewId, $crewData)
+            'result' => $this->crewRepository->updateCrew($crewId, $request->all()),
+            'message' => 'Crew member updated successfully'
         ]);
     }
 

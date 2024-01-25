@@ -11,7 +11,7 @@ class StoreCrewRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,10 @@ class StoreCrewRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|min:3|max:255',
+            'family' => 'required|min:3|max:255',
+            'role' => 'required|min:5|max:255',
+            'birthdate'=>'required|date'
         ];
     }
 }

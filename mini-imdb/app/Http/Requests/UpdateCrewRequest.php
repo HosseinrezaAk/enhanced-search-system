@@ -11,7 +11,7 @@ class UpdateCrewRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,10 @@ class UpdateCrewRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'sometimes|required|min:3|max:255',
+            'family' => 'sometimes|required|min:3|max:255',
+            'role' => 'sometimes|required|min:5|max:255',
+            'birthdate' => 'sometimes|required|date',
         ];
     }
 }
