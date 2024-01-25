@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Crew extends Model
 {
@@ -15,4 +16,8 @@ class Crew extends Model
         'role',
         'birthdate'
     ];
+
+    public function movies(){
+        return $this->BelongsToMany(Movie::class);
+    }
 }
