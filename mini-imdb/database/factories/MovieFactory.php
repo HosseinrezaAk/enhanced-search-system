@@ -8,7 +8,7 @@ use App\Models\Movie;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Movie>
+ * @extends Factory<Movie>
  */
 class MovieFactory extends Factory
 {
@@ -21,17 +21,17 @@ class MovieFactory extends Factory
     {
         return [
             'genre_id'=> Genre::all()->random()->id,
-            'title'=> fake()->sentence,
+            'title'=> fake()->sentence(2),
             'year'=> fake()->year,
             'rank'=> fake()->randomfloat(2,0,10),
-            'description' => fake()->paragraph,
+            'description' => fake()->paragraph(2),
         ];
     }
 
-    public function configure()
+    public function configure(): Factory|MovieFactory
     {
         return $this->afterCreating(function (Movie $movie) {
-            // Attach crew members to the movie using the pivot table
+
             $crewIds = Crew::all()->random(3)->pluck('id')->toArray();
             $movie->crews()->attach($crewIds);
         });

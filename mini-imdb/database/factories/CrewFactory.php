@@ -19,7 +19,7 @@ class CrewFactory extends Factory
         return [
             'name'=> fake()->firstName,
             'family' => fake()->lastName,
-            'role'=> fake()->randomElement(['SimpleStaff','MovieManager','SeriesManager']),
+            'role'=> fake()->randomElement(['Director','Producer','Actor','Screenwriter','Production Designer','Composer']),
             'birthdate' =>fake()->date,
         ];
     }
