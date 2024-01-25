@@ -6,11 +6,12 @@ use App\Http\Requests\StoreCrewRequest;
 use App\Http\Requests\UpdateCrewRequest;
 use App\Models\Crew;
 use App\Repositories\Crew\CrewRepositoryInterface;
+use Illuminate\Database\Eloquent\Collection;
 
 class CrewRepository implements CrewRepositoryInterface
 {
 
-    public function getAllCrews()
+    public function getAllCrews(): Collection
     {
         return Crew::all();
     }
@@ -30,7 +31,7 @@ class CrewRepository implements CrewRepositoryInterface
         return $crew;
 
     }
-    public function deleteCrew($crewId)
+    public function deleteCrew($crewId): void
     {
         $crew = Crew::findOrFail($crewId);
         $crew->movies()->detach();
