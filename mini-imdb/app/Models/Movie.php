@@ -18,8 +18,9 @@ class Movie extends Model
         'description',
     ];
 
-    public function crews(){
-        
+    public function crews(): BelongsToMany
+    {
+
         return $this->BelongsToMany(Crew::class);
     }
 

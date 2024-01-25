@@ -17,7 +17,8 @@ class Crew extends Model
         'birthdate'
     ];
 
-    public function movies(){
+    public function movies(): BelongsToMany
+    {
         return $this->BelongsToMany(Movie::class);
     }
 }
