@@ -22,18 +22,20 @@ class CrewRepository implements CrewRepositoryInterface
 
     public function deleteCrew($crewId)
     {
-        Crew::destroy($crewId);
+        $crew = Crew::findOrFail($crewId);
+        $crew->movies()->detach();
+        $crew->delete();
     }
 
-    public function createCrew(StoreCrewRequest $request)
+    public function createCrew(array $crewData)
     {
-        return Crew::create($request->all());
+        return Crew::create($crewData);
     }
 
-    public function updateCrew($crewId, UpdateCrewRequest $request)
+    public function updateCrew($crewId, array $crewData)
     {
         $crew = Crew::findOrFail($crewId);
-        return $crew->update($request->all());
+        return $crew->update($crewData);
 
     }
 }
