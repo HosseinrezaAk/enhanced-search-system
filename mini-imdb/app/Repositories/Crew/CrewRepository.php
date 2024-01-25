@@ -4,6 +4,7 @@ namespace App\Repositories\Crew;
 
 use App\Http\Requests\StoreCrewRequest;
 use App\Http\Requests\UpdateCrewRequest;
+use App\Models\Crew;
 use App\Repositories\Crew\CrewRepositoryInterface;
 
 class CrewRepository implements CrewRepositoryInterface
@@ -11,26 +12,28 @@ class CrewRepository implements CrewRepositoryInterface
 
     public function getAllCrews()
     {
-        // TODO: Implement getAllCrews() method.
+        return Crew::all();
     }
 
     public function getCrewById($crewId)
     {
-        // TODO: Implement getCrewById() method.
+        return Crew::findOrfail($crewId);
     }
 
     public function deleteCrew($crewId)
     {
-        // TODO: Implement deleteCrew() method.
+        Crew::destroy($crewId);
     }
 
     public function createCrew(StoreCrewRequest $request)
     {
-        // TODO: Implement createCrew() method.
+        return Crew::create($request->all());
     }
 
     public function updateCrew($crewId, UpdateCrewRequest $request)
     {
-        // TODO: Implement updateCrew() method.
+        $crew = Crew::findOrFail($crewId);
+        return $crew->update($request->all());
+
     }
 }
