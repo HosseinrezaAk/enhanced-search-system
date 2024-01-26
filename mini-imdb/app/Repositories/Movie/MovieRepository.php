@@ -100,4 +100,9 @@ class MovieRepository implements MovieRepositoryInterface
         return $result;
     }
 
+    public function searchElastic(array $criteria)
+    {
+        return Movie::search($criteria['query']);
+    }
+
 }

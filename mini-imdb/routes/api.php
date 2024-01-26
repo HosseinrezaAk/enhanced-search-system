@@ -25,7 +25,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiResource('crews', CrewController::class);
 
 Route::apiResource('genres', GenreController::class);
+
 Route::get('/movies/search',[MovieController::class,'search']);
+Route::get('movies/search-elastic',[MovieController::class, 'searchElastic']);
 Route::apiResource('movies', MovieController::class);
 
 

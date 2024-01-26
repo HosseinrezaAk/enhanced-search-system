@@ -122,8 +122,12 @@
       <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/babenkoivan/elastic-adapter" />
+      <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/babenkoivan/elastic-client" />
+      <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/babenkoivan/elastic-scout-driver" />
       <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/elastic/transport" />
       <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/elasticsearch/elasticsearch" />
+      <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/laravel/scout" />
       <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/php-http/discovery" />
       <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/php-http/httplug" />
       <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/php-http/promise" />

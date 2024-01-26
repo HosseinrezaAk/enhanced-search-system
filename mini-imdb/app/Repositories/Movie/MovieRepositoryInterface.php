@@ -15,4 +15,6 @@ interface MovieRepositoryInterface
 
     public function searchMovies(array $criteria);
 
+    public function searchElastic(array $criteria);
+
 }

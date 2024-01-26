@@ -81,4 +81,10 @@ class MovieController extends Controller
         $searchResults = $this->movieRepository->searchMovies($request->all());
         return response()->json(['result' => $searchResults]);
     }
+
+    public function searchElastic(Request $request): JsonResponse
+    {
+        $searchResults = $this->movieRepository->searchElastic($request->all());
+        return response()->json(['result' => $searchResults]);
+    }
 }

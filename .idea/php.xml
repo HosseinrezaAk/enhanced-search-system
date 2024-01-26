@@ -134,6 +134,10 @@
       <path value="$PROJECT_DIR$/mini-imdb/vendor/php-http/promise" />
       <path value="$PROJECT_DIR$/mini-imdb/vendor/elasticsearch/elasticsearch" />
       <path value="$PROJECT_DIR$/mini-imdb/vendor/elastic/transport" />
+      <path value="$PROJECT_DIR$/mini-imdb/vendor/laravel/scout" />
+      <path value="$PROJECT_DIR$/mini-imdb/vendor/babenkoivan/elastic-adapter" />
+      <path value="$PROJECT_DIR$/mini-imdb/vendor/babenkoivan/elastic-client" />
+      <path value="$PROJECT_DIR$/mini-imdb/vendor/babenkoivan/elastic-scout-driver" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
