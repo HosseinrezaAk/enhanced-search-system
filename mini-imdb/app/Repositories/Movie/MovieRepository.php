@@ -4,6 +4,7 @@ namespace App\Repositories\Movie;
 
 use App\Http\Requests\StoreMovieRequest;
 use App\Http\Requests\UpdateMovieRequest;
+use App\Models\Movie;
 use App\Repositories\Movie\MovieRepositoryInterface;
 
 class MovieRepository implements MovieRepositoryInterface
@@ -11,26 +12,30 @@ class MovieRepository implements MovieRepositoryInterface
 
     public function getAllMovies()
     {
-        // TODO: Implement getAllMovies() method.
+        return Movie::all();
     }
-
+    public function createMovie(array $movieData)
+    {
+        return Movie::create($movieData);
+    }
     public function getMovieById($movieId)
     {
-        // TODO: Implement getMovieById() method.
+        return Movie::findOrFail($movieId);
     }
-
+    public function updateMovie($movieId, array $movieData)
+    {
+        $movie = Movie::findOrFail($movieId);
+        $movie->update($movieData);
+        return $movie;
+    }
     public function deleteMovie($movieId)
     {
-        // TODO: Implement deleteMovie() method.
+        $movie = Movie::findOrFail($movieId);
+        $movie->crews()->detach();
+        $movie->delete();
     }
 
-    public function createMovie(StoreMovieRequest $request)
-    {
-        // TODO: Implement createMovie() method.
-    }
 
-    public function updateMovie($movieId, UpdateMovieRequest $request)
-    {
-        // TODO: Implement updateMovie() method.
-    }
+
+
 }
