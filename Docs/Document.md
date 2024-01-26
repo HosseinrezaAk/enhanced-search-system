@@ -11,7 +11,7 @@
 ### DB Structure
 
 <div align="center">
-    <img src="../images/DBstructure.PNG" height="">
+    <img src="../images/DBstructure.PNG" height="450">
    
 </div>
 
