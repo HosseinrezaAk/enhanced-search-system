@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateMovieRequest;
 use App\Models\Movie;
 use App\Repositories\Movie\MovieRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\Cache;
 
 class MovieRepository implements MovieRepositoryInterface
 {
@@ -59,6 +60,14 @@ class MovieRepository implements MovieRepositoryInterface
 
     public function searchMovies(array $criteria): Collection|array
     {
+
+        $cacheKey = 'movie_search_' . md5(json_encode($criteria));
+
+        if (Cache::has($cacheKey)) {
+
+            return Cache::get($cacheKey);
+        }
+
         $query = Movie::query();
 
         if (isset($criteria['title'])) {
@@ -85,7 +94,12 @@ class MovieRepository implements MovieRepositoryInterface
             $query->where('year', '=', $criteria['year']);
         }
         $query->with('genre', 'crews');
-        return $query->get();
+
+        $result = $query->get();
+
+
+        Cache::put($cacheKey, $result, 60);
+        return $result;
     }
 
 }
