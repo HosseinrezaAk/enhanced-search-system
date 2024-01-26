@@ -13,4 +13,6 @@ interface MovieRepositoryInterface
     public function updateMovie($movieId, array $movieData);
     public function deleteMovie($movieId);
 
+    public function searchMovies(array $criteria);
+
 }

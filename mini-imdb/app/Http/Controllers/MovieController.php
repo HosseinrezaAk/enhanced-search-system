@@ -71,4 +71,11 @@ class MovieController extends Controller
             return response()->json(['error' => 'Failed to delete movie.'], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
     }
+
+    public function search(Request $request): JsonResponse
+    {
+
+        $searchResults = $this->movieRepository->searchMovies($request->all());
+        return response()->json(['result' => $searchResults]);
+    }
 }

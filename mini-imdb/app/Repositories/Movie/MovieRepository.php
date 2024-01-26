@@ -6,6 +6,7 @@ use App\Http\Requests\StoreMovieRequest;
 use App\Http\Requests\UpdateMovieRequest;
 use App\Models\Movie;
 use App\Repositories\Movie\MovieRepositoryInterface;
+use Illuminate\Database\Eloquent\Collection;
 
 class MovieRepository implements MovieRepositoryInterface
 {
@@ -56,6 +57,35 @@ class MovieRepository implements MovieRepositoryInterface
     }
 
 
+    public function searchMovies(array $criteria): Collection|array
+    {
+        $query = Movie::query();
 
+        if (isset($criteria['title'])) {
+            $query->where('title', 'like', '%' . $criteria['title'] . '%');
+        }
+
+        if (isset($criteria['crew'])) {
+            $query->whereHas('crews', function ($subQuery) use ($criteria) {
+                $subQuery->where('name', 'like', '%' . $criteria['crew'] . '%');
+            });
+        }
+
+        if (isset($criteria['genre'])) {
+            $query->whereHas('genre', function ($subQuery) use ($criteria) {
+                $subQuery->where('title', 'like', '%' . $criteria['genre'] . '%');
+            });
+        }
+
+        if (isset($criteria['rank'])) {
+            $query->where('rank', '>=', $criteria['rank']);
+        }
+
+        if (isset($criteria['year'])) {
+            $query->where('year', '=', $criteria['year']);
+        }
+        $query->with('genre', 'crews');
+        return $query->get();
+    }
 
 }
