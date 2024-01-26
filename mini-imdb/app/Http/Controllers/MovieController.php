@@ -15,6 +15,9 @@ class MovieController extends Controller
 
     public function __construct(MovieRepositoryInterface $movieRepository)
     {
+        //5 hits in 5 minutes
+        $this->middleware('throttle:5,5,1,redis')->only('search');
+
         $this->movieRepository = $movieRepository;
     }
 
@@ -70,5 +73,12 @@ class MovieController extends Controller
         } catch (\Exception $e) {
             return response()->json(['error' => 'Failed to delete movie.'], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
+    }
+
+    public function search(Request $request): JsonResponse
+    {
+
+        $searchResults = $this->movieRepository->searchMovies($request->all());
+        return response()->json(['result' => $searchResults]);
     }
 }
