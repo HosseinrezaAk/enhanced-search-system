@@ -8,6 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/mini-imdb/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/mini-imdb/tests/Feature" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/mini-imdb/tests/Unit" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/carbonphp/carbon-doctrine-types" />
       <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/composer" />
@@ -120,6 +122,11 @@
       <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/elastic/transport" />
+      <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/elasticsearch/elasticsearch" />
+      <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/php-http/discovery" />
+      <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/php-http/httplug" />
+      <excludeFolder url="file://$MODULE_DIR$/mini-imdb/vendor/php-http/promise" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

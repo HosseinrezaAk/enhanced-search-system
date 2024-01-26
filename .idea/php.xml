@@ -129,6 +129,11 @@
       <path value="$PROJECT_DIR$/mini-imdb/vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/mini-imdb/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/mini-imdb/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/mini-imdb/vendor/php-http/discovery" />
+      <path value="$PROJECT_DIR$/mini-imdb/vendor/php-http/httplug" />
+      <path value="$PROJECT_DIR$/mini-imdb/vendor/php-http/promise" />
+      <path value="$PROJECT_DIR$/mini-imdb/vendor/elasticsearch/elasticsearch" />
+      <path value="$PROJECT_DIR$/mini-imdb/vendor/elastic/transport" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
