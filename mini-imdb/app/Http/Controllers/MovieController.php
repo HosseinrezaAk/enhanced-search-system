@@ -15,6 +15,9 @@ class MovieController extends Controller
 
     public function __construct(MovieRepositoryInterface $movieRepository)
     {
+        //5 hits in 5 minutes
+        $this->middleware('throttle:5,5,1,redis')->only('search');
+
         $this->movieRepository = $movieRepository;
     }
 

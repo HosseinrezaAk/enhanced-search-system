@@ -64,12 +64,10 @@ class MovieRepository implements MovieRepositoryInterface
         $cacheKey = 'movie_search_' . md5(json_encode($criteria));
 
         if (Cache::has($cacheKey)) {
-
             return Cache::get($cacheKey);
         }
 
         $query = Movie::query();
-
         if (isset($criteria['title'])) {
             $query->where('title', 'like', '%' . $criteria['title'] . '%');
         }
