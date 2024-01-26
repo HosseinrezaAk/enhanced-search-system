@@ -40,7 +40,7 @@ class MovieController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($movieId)
+    public function show($movieId): JsonResponse
     {
        return response()->json([
           'result' => $this->movieRepository->getMovieById($movieId)
@@ -50,7 +50,7 @@ class MovieController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateMovieRequest $request, $movieId)
+    public function update(UpdateMovieRequest $request, $movieId): JsonResponse
     {
         return response()->json([
            'result' => $this->movieRepository->updateMovie($movieId, $request->all()),
