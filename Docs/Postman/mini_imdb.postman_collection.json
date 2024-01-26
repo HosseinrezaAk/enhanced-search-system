@@ -1,0 +1,1624 @@
+{
+	"info": {
+		"_postman_id": "a876892d-488a-46fc-8be9-9f35bb4d5b66",
+		"name": "mini_imdb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32561246"
+	},
+	"item": [
+		{
+			"name": "Crew",
+			"item": [
+				{
+					"name": "Get All Crews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/crews",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"crews"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/crews",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"crews"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 25 Jan 2024 16:05:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": [\n        {\n            \"id\": 1,\n            \"name\": \"Jeanne\",\n            \"family\": \"O'Kon\",\n            \"role\": \"Composer\",\n            \"birthdate\": \"2007-12-26\",\n            \"created_at\": \"2024-01-25T11:03:34.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:34.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Tomas\",\n            \"family\": \"Hirthe\",\n            \"role\": \"Producer\",\n            \"birthdate\": \"2016-08-20\",\n            \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:35.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Lucienne\",\n            \"family\": \"Sauer\",\n            \"role\": \"Composer\",\n            \"birthdate\": \"2008-09-25\",\n            \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:35.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Liza\",\n            \"family\": \"Russel\",\n            \"role\": \"Screenwriter\",\n            \"birthdate\": \"1981-07-20\",\n            \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:35.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Armando\",\n            \"family\": \"Dach\",\n            \"role\": \"Actor\",\n            \"birthdate\": \"1980-02-28\",\n            \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:35.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Dovie\",\n            \"family\": \"Walsh\",\n            \"role\": \"Director\",\n            \"birthdate\": \"1979-02-22\",\n            \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:35.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Ashly\",\n            \"family\": \"Block\",\n            \"role\": \"Production Designer\",\n            \"birthdate\": \"2006-10-15\",\n            \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:35.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Hilma\",\n            \"family\": \"Powlowski\",\n            \"role\": \"Composer\",\n            \"birthdate\": \"1993-05-21\",\n            \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:35.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Harmony\",\n            \"family\": \"Bernhard\",\n            \"role\": \"Screenwriter\",\n            \"birthdate\": \"1991-05-07\",\n            \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:35.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Kailey\",\n            \"family\": \"Gibson\",\n            \"role\": \"Production Designer\",\n            \"birthdate\": \"2023-06-22\",\n            \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:35.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Crew",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Hosseinreza\",\r\n    \"family\": \"Akbari\",\r\n    \"role\": \"composer\",\r\n    \"birthdate\": \"1998-04-27\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/crews",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"crews"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Hosseinreza\",\r\n    \"family\": \"Akbari\",\r\n    \"role\": \"composer\",\r\n    \"birthdate\": \"1998-04-27\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/crews",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"crews"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 25 Jan 2024 16:17:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"name\": \"Hosseinreza\",\n        \"family\": \"Akbari\",\n        \"role\": \"composer\",\n        \"birthdate\": \"1998-04-27\",\n        \"updated_at\": \"2024-01-25T16:17:49.000000Z\",\n        \"created_at\": \"2024-01-25T16:17:49.000000Z\",\n        \"id\": 11\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Crew",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/crews/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"crews",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/crews/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"crews",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 25 Jan 2024 16:06:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"id\": 1,\n        \"name\": \"Jeanne\",\n        \"family\": \"O'Kon\",\n        \"role\": \"Composer\",\n        \"birthdate\": \"2007-12-26\",\n        \"created_at\": \"2024-01-25T11:03:34.000000Z\",\n        \"updated_at\": \"2024-01-25T11:03:34.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Crew",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\": \"actor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/crews/11",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"crews",
+								"11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"role\": \"actor\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/crews/11",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"crews",
+										"11"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 25 Jan 2024 16:42:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"id\": 11,\n        \"name\": \"Hosseinreza\",\n        \"family\": \"Akbari\",\n        \"role\": \"actor\",\n        \"birthdate\": \"1998-04-27\",\n        \"created_at\": \"2024-01-25T16:17:49.000000Z\",\n        \"updated_at\": \"2024-01-25T16:42:16.000000Z\"\n    },\n    \"message\": \"Crew member updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Crew",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/crews/66",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"crews",
+								"66"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/crews/66",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"crews",
+										"66"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 25 Jan 2024 18:22:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <title>Not Found</title>\n        <style>\n            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}code{font-family:monospace,monospace;font-size:1em}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}code{font-family:Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-gray-400{--border-opacity:1;border-color:#cbd5e0;border-color:rgba(203,213,224,var(--border-opacity))}.border-t{border-top-width:1px}.border-r{border-right-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-xl{max-width:36rem}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.uppercase{text-transform:uppercase}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.tracking-wider{letter-spacing:.05em}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@-webkit-keyframes spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}@keyframes spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}@-webkit-keyframes ping{0%{transform:scale(1);opacity:1}75%,to{transform:scale(2);opacity:0}}@keyframes ping{0%{transform:scale(1);opacity:1}75%,to{transform:scale(2);opacity:0}}@-webkit-keyframes pulse{0%,to{opacity:1}50%{opacity:.5}}@keyframes pulse{0%,to{opacity:1}50%{opacity:.5}}@-webkit-keyframes bounce{0%,to{transform:translateY(-25%);-webkit-animation-timing-function:cubic-bezier(.8,0,1,1);animation-timing-function:cubic-bezier(.8,0,1,1)}50%{transform:translateY(0);-webkit-animation-timing-function:cubic-bezier(0,0,.2,1);animation-timing-function:cubic-bezier(0,0,.2,1)}}@keyframes bounce{0%,to{transform:translateY(-25%);-webkit-animation-timing-function:cubic-bezier(.8,0,1,1);animation-timing-function:cubic-bezier(.8,0,1,1)}50%{transform:translateY(0);-webkit-animation-timing-function:cubic-bezier(0,0,.2,1);animation-timing-function:cubic-bezier(0,0,.2,1)}}@media (min-width:640px){.sm\\:rounded-lg{border-radius:.5rem}.sm\\:block{display:block}.sm\\:items-center{align-items:center}.sm\\:justify-start{justify-content:flex-start}.sm\\:justify-between{justify-content:space-between}.sm\\:h-20{height:5rem}.sm\\:ml-0{margin-left:0}.sm\\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\\:pt-0{padding-top:0}.sm\\:text-left{text-align:left}.sm\\:text-right{text-align:right}}@media (min-width:768px){.md\\:border-t-0{border-top-width:0}.md\\:border-l{border-left-width:1px}.md\\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}}\n        </style>\n        <style>\n            body {\n                font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n            }\n        </style>\n    </head>\n    <body class=\"antialiased\">\n        <div class=\"relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0\">\n            <div class=\"max-w-xl mx-auto sm:px-6 lg:px-8\">\n                <div class=\"flex items-center pt-8 sm:justify-start sm:pt-0\">\n                    <div class=\"px-4 text-lg text-gray-500 border-r border-gray-400 tracking-wider\">\n                        404                    </div>\n                    <div class=\"ml-4 text-lg text-gray-500 uppercase tracking-wider\">\n                        Not Found                    </div>\n                </div>\n            </div>\n        </div>\n    </body>\n</html>"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Genre",
+			"item": [
+				{
+					"name": "Get all Genres",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/genres",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"genres"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/genres",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"genres"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 25 Jan 2024 19:23:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": [\n        {\n            \"id\": 1,\n            \"title\": \"Action\",\n            \"created_at\": \"2024-01-25T11:03:38.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:38.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Drama\",\n            \"created_at\": \"2024-01-25T11:03:38.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:38.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Comedy\",\n            \"created_at\": \"2024-01-25T11:03:38.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:38.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Genre",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Romance\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/genres",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"genres"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Romance\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/genres",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"genres"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 25 Jan 2024 19:26:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"title\": \"Romance\",\n        \"updated_at\": \"2024-01-25T19:26:26.000000Z\",\n        \"created_at\": \"2024-01-25T19:26:26.000000Z\",\n        \"id\": 4\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Genre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/genres/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"genres",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/genres/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"genres",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 25 Jan 2024 19:29:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"id\": 2,\n        \"title\": \"Drama\",\n        \"created_at\": \"2024-01-25T11:03:38.000000Z\",\n        \"updated_at\": \"2024-01-25T11:03:38.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Genre",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"thrilled\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/genres/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"genres",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"thrilled\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/genres/4",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"genres",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 25 Jan 2024 19:46:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"id\": 4,\n        \"title\": \"Romance\",\n        \"created_at\": \"2024-01-25T19:26:26.000000Z\",\n        \"updated_at\": \"2024-01-25T19:26:26.000000Z\"\n    },\n    \"message\": \"Genre updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Genre",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/genres/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"genres",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/genres/4",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"genres",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 25 Jan 2024 19:48:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Genre deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "Get all Movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/movies",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Jan 2024 11:09:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": [\n        {\n            \"id\": 1,\n            \"genre_id\": 3,\n            \"title\": \"Mollitia nemo qui.\",\n            \"year\": \"2009\",\n            \"rank\": 7.41,\n            \"description\": \"Voluptatum ullam iure incidunt modi blanditiis blanditiis possimus. Deleniti dolores qui occaecati nobis rerum repudiandae neque.\",\n            \"created_at\": \"2024-01-25T11:03:40.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:40.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"genre_id\": 2,\n            \"title\": \"Nisi officiis cum.\",\n            \"year\": \"2023\",\n            \"rank\": 1.52,\n            \"description\": \"Voluptatum aut consequuntur pariatur quo dolores quas voluptatem. Mollitia dolorum tempora ratione dicta officiis eaque totam ratione.\",\n            \"created_at\": \"2024-01-25T11:03:41.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:41.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"genre_id\": 3,\n            \"title\": \"Voluptatem ut.\",\n            \"year\": \"1996\",\n            \"rank\": 8.63,\n            \"description\": \"Possimus unde magni ut rerum. Debitis incidunt consequatur sed rem non blanditiis cupiditate.\",\n            \"created_at\": \"2024-01-25T11:03:41.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:41.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"genre_id\": 3,\n            \"title\": \"Rerum error.\",\n            \"year\": \"2016\",\n            \"rank\": 7.38,\n            \"description\": \"Voluptatem mollitia quam voluptates atque tempora unde. Et ut at neque esse est natus ut.\",\n            \"created_at\": \"2024-01-25T11:03:41.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:41.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"genre_id\": 2,\n            \"title\": \"Iste fuga.\",\n            \"year\": \"1999\",\n            \"rank\": 0.26,\n            \"description\": \"Iure optio dolorem saepe nostrum. Harum provident eius illum.\",\n            \"created_at\": \"2024-01-25T11:03:41.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:41.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"genre_id\": 3,\n            \"title\": \"Molestiae in atque.\",\n            \"year\": \"2013\",\n            \"rank\": 4.13,\n            \"description\": \"Autem accusantium velit qui sint in soluta non. Fugiat ratione necessitatibus voluptatem ut quos non qui fuga.\",\n            \"created_at\": \"2024-01-25T11:03:41.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:41.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"genre_id\": 2,\n            \"title\": \"Aut in vitae.\",\n            \"year\": \"1980\",\n            \"rank\": 5.49,\n            \"description\": \"Magnam consequatur perspiciatis est explicabo. Neque officiis saepe reiciendis eaque consequatur.\",\n            \"created_at\": \"2024-01-25T11:03:41.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:41.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"genre_id\": 1,\n            \"title\": \"Nam neque perspiciatis.\",\n            \"year\": \"2009\",\n            \"rank\": 6.08,\n            \"description\": \"Id quibusdam voluptatem et. Impedit nisi delectus molestiae quia libero hic.\",\n            \"created_at\": \"2024-01-25T11:03:41.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:41.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"genre_id\": 1,\n            \"title\": \"Dignissimos saepe.\",\n            \"year\": \"2021\",\n            \"rank\": 4.49,\n            \"description\": \"Reprehenderit quae in omnis et esse in sed eveniet. Non nisi temporibus asperiores rerum maxime. Placeat repellat deleniti repellendus.\",\n            \"created_at\": \"2024-01-25T11:03:41.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:41.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"genre_id\": 3,\n            \"title\": \"Et repudiandae et.\",\n            \"year\": \"2016\",\n            \"rank\": 1.94,\n            \"description\": \"Iusto veniam mollitia aut omnis. Commodi qui quasi voluptatem nostrum eum dignissimos.\",\n            \"created_at\": \"2024-01-25T11:03:41.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:41.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Hossein Movie\",\r\n  \"year\": 2023,\r\n  \"rank\": 9.8,\r\n  \"description\": \"Life of Hosseinreza\",\r\n  \"genre_id\": 1,\r\n  \"crew_ids\": [1, 2, 3]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Hossein Movie\",\r\n  \"year\": 2023,\r\n  \"rank\": 9.8,\r\n  \"description\": \"Life of Hosseinreza\",\r\n  \"genre_id\": 1,\r\n  \"crew_ids\": [1, 2, 3]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/movies",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Jan 2024 11:45:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"title\": \"Hossein Movie\",\n        \"year\": 2023,\n        \"rank\": 9.8,\n        \"description\": \"Life of Hosseinreza\",\n        \"genre_id\": 1,\n        \"updated_at\": \"2024-01-26T11:45:06.000000Z\",\n        \"created_at\": \"2024-01-26T11:45:06.000000Z\",\n        \"id\": 13,\n        \"crews\": [\n            {\n                \"id\": 1,\n                \"name\": \"Jeanne\",\n                \"family\": \"O'Kon\",\n                \"role\": \"Composer\",\n                \"birthdate\": \"2007-12-26\",\n                \"created_at\": \"2024-01-25T11:03:34.000000Z\",\n                \"updated_at\": \"2024-01-25T11:03:34.000000Z\",\n                \"pivot\": {\n                    \"movie_id\": 13,\n                    \"crew_id\": 1\n                }\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Tomas\",\n                \"family\": \"Hirthe\",\n                \"role\": \"Producer\",\n                \"birthdate\": \"2016-08-20\",\n                \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n                \"updated_at\": \"2024-01-25T11:03:35.000000Z\",\n                \"pivot\": {\n                    \"movie_id\": 13,\n                    \"crew_id\": 2\n                }\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Lucienne\",\n                \"family\": \"Sauer\",\n                \"role\": \"Composer\",\n                \"birthdate\": \"2008-09-25\",\n                \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n                \"updated_at\": \"2024-01-25T11:03:35.000000Z\",\n                \"pivot\": {\n                    \"movie_id\": 13,\n                    \"crew_id\": 3\n                }\n            }\n        ],\n        \"genre\": {\n            \"id\": 1,\n            \"title\": \"Action\",\n            \"created_at\": \"2024-01-25T11:03:38.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:38.000000Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Movie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movies/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update movie",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Updated Movie Title\",\r\n    \"year\": 2023,\r\n    \"rank\": 8.5,\r\n    \"description\": \"Updated movie description\",\r\n    \"genre_id\": 2,\r\n    \"crew_ids\": [1, 3, 5]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movies/12",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								"12"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Updated Movie Title\",\r\n    \"year\": 2023,\r\n    \"rank\": 8.5,\r\n    \"description\": \"Updated movie description\",\r\n    \"genre_id\": 2,\r\n    \"crew_ids\": [1, 3, 5]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/movies/12",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies",
+										"12"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Jan 2024 12:31:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"id\": 12,\n        \"genre_id\": 2,\n        \"title\": \"Updated Movie Title\",\n        \"year\": 2023,\n        \"rank\": 8.5,\n        \"description\": \"Updated movie description\",\n        \"created_at\": \"2024-01-26T11:43:58.000000Z\",\n        \"updated_at\": \"2024-01-26T12:31:35.000000Z\",\n        \"crews\": [\n            {\n                \"id\": 1,\n                \"name\": \"Jeanne\",\n                \"family\": \"O'Kon\",\n                \"role\": \"Composer\",\n                \"birthdate\": \"2007-12-26\",\n                \"created_at\": \"2024-01-25T11:03:34.000000Z\",\n                \"updated_at\": \"2024-01-25T11:03:34.000000Z\",\n                \"pivot\": {\n                    \"movie_id\": 12,\n                    \"crew_id\": 1\n                }\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Lucienne\",\n                \"family\": \"Sauer\",\n                \"role\": \"Composer\",\n                \"birthdate\": \"2008-09-25\",\n                \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n                \"updated_at\": \"2024-01-25T11:03:35.000000Z\",\n                \"pivot\": {\n                    \"movie_id\": 12,\n                    \"crew_id\": 3\n                }\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Armando\",\n                \"family\": \"Dach\",\n                \"role\": \"Actor\",\n                \"birthdate\": \"1980-02-28\",\n                \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n                \"updated_at\": \"2024-01-25T11:03:35.000000Z\",\n                \"pivot\": {\n                    \"movie_id\": 12,\n                    \"crew_id\": 5\n                }\n            }\n        ],\n        \"genre\": {\n            \"id\": 2,\n            \"title\": \"Drama\",\n            \"created_at\": \"2024-01-25T11:03:38.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:38.000000Z\"\n        }\n    },\n    \"message\": \"Movie updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Movie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movies/13",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								"13"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/movies/13",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies",
+										"13"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Jan 2024 12:34:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Movie deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "search Movie",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"title\":\"s\",\r\n    \"crew\":\"Liza\",\r\n    \"sort_by\": \"rank\",\r\n    \"sort_order\": \"asc\"\r\n       \r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movies/search",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								"search"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"title\":\"nisi\",\r\n    \"crew\":\"Liza\",\r\n    \"rank\": 1.52\r\n       \r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/movies/search",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies",
+										"search"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Jan 2024 19:37:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "5"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "2"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": [\n        {\n            \"id\": 2,\n            \"genre_id\": 2,\n            \"title\": \"Nisi officiis cum.\",\n            \"year\": \"2023\",\n            \"rank\": 1.52,\n            \"description\": \"Voluptatum aut consequuntur pariatur quo dolores quas voluptatem. Mollitia dolorum tempora ratione dicta officiis eaque totam ratione.\",\n            \"created_at\": \"2024-01-25T11:03:41.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:41.000000Z\",\n            \"genre\": {\n                \"id\": 2,\n                \"title\": \"Drama\",\n                \"created_at\": \"2024-01-25T11:03:38.000000Z\",\n                \"updated_at\": \"2024-01-25T11:03:38.000000Z\"\n            },\n            \"crews\": [\n                {\n                    \"id\": 4,\n                    \"name\": \"Liza\",\n                    \"family\": \"Russel\",\n                    \"role\": \"Screenwriter\",\n                    \"birthdate\": \"1981-07-20\",\n                    \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"updated_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"pivot\": {\n                        \"movie_id\": 2,\n                        \"crew_id\": 4\n                    }\n                },\n                {\n                    \"id\": 5,\n                    \"name\": \"Armando\",\n                    \"family\": \"Dach\",\n                    \"role\": \"Actor\",\n                    \"birthdate\": \"1980-02-28\",\n                    \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"updated_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"pivot\": {\n                        \"movie_id\": 2,\n                        \"crew_id\": 5\n                    }\n                },\n                {\n                    \"id\": 6,\n                    \"name\": \"Dovie\",\n                    \"family\": \"Walsh\",\n                    \"role\": \"Director\",\n                    \"birthdate\": \"1979-02-22\",\n                    \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"updated_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"pivot\": {\n                        \"movie_id\": 2,\n                        \"crew_id\": 6\n                    }\n                }\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "Response with sortOrder",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"title\":\"s\",\r\n    \"crew\":\"Liza\",\r\n    \"sort_by\": \"rank\",\r\n    \"sort_order\": \"asc\"\r\n       \r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/movies/search",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies",
+										"search"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Jan 2024 19:41:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "5"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "3"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": [\n        {\n            \"id\": 5,\n            \"genre_id\": 2,\n            \"title\": \"Iste fuga.\",\n            \"year\": \"1999\",\n            \"rank\": 0.26,\n            \"description\": \"Iure optio dolorem saepe nostrum. Harum provident eius illum.\",\n            \"created_at\": \"2024-01-25T11:03:41.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:41.000000Z\",\n            \"genre\": {\n                \"id\": 2,\n                \"title\": \"Drama\",\n                \"created_at\": \"2024-01-25T11:03:38.000000Z\",\n                \"updated_at\": \"2024-01-25T11:03:38.000000Z\"\n            },\n            \"crews\": [\n                {\n                    \"id\": 4,\n                    \"name\": \"Liza\",\n                    \"family\": \"Russel\",\n                    \"role\": \"Screenwriter\",\n                    \"birthdate\": \"1981-07-20\",\n                    \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"updated_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"pivot\": {\n                        \"movie_id\": 5,\n                        \"crew_id\": 4\n                    }\n                },\n                {\n                    \"id\": 5,\n                    \"name\": \"Armando\",\n                    \"family\": \"Dach\",\n                    \"role\": \"Actor\",\n                    \"birthdate\": \"1980-02-28\",\n                    \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"updated_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"pivot\": {\n                        \"movie_id\": 5,\n                        \"crew_id\": 5\n                    }\n                },\n                {\n                    \"id\": 9,\n                    \"name\": \"Harmony\",\n                    \"family\": \"Bernhard\",\n                    \"role\": \"Screenwriter\",\n                    \"birthdate\": \"1991-05-07\",\n                    \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"updated_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"pivot\": {\n                        \"movie_id\": 5,\n                        \"crew_id\": 9\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"genre_id\": 2,\n            \"title\": \"Nisi officiis cum.\",\n            \"year\": \"2023\",\n            \"rank\": 1.52,\n            \"description\": \"Voluptatum aut consequuntur pariatur quo dolores quas voluptatem. Mollitia dolorum tempora ratione dicta officiis eaque totam ratione.\",\n            \"created_at\": \"2024-01-25T11:03:41.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:41.000000Z\",\n            \"genre\": {\n                \"id\": 2,\n                \"title\": \"Drama\",\n                \"created_at\": \"2024-01-25T11:03:38.000000Z\",\n                \"updated_at\": \"2024-01-25T11:03:38.000000Z\"\n            },\n            \"crews\": [\n                {\n                    \"id\": 4,\n                    \"name\": \"Liza\",\n                    \"family\": \"Russel\",\n                    \"role\": \"Screenwriter\",\n                    \"birthdate\": \"1981-07-20\",\n                    \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"updated_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"pivot\": {\n                        \"movie_id\": 2,\n                        \"crew_id\": 4\n                    }\n                },\n                {\n                    \"id\": 5,\n                    \"name\": \"Armando\",\n                    \"family\": \"Dach\",\n                    \"role\": \"Actor\",\n                    \"birthdate\": \"1980-02-28\",\n                    \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"updated_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"pivot\": {\n                        \"movie_id\": 2,\n                        \"crew_id\": 5\n                    }\n                },\n                {\n                    \"id\": 6,\n                    \"name\": \"Dovie\",\n                    \"family\": \"Walsh\",\n                    \"role\": \"Director\",\n                    \"birthdate\": \"1979-02-22\",\n                    \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"updated_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"pivot\": {\n                        \"movie_id\": 2,\n                        \"crew_id\": 6\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 6,\n            \"genre_id\": 3,\n            \"title\": \"Molestiae in atque.\",\n            \"year\": \"2013\",\n            \"rank\": 4.13,\n            \"description\": \"Autem accusantium velit qui sint in soluta non. Fugiat ratione necessitatibus voluptatem ut quos non qui fuga.\",\n            \"created_at\": \"2024-01-25T11:03:41.000000Z\",\n            \"updated_at\": \"2024-01-25T11:03:41.000000Z\",\n            \"genre\": {\n                \"id\": 3,\n                \"title\": \"Comedy\",\n                \"created_at\": \"2024-01-25T11:03:38.000000Z\",\n                \"updated_at\": \"2024-01-25T11:03:38.000000Z\"\n            },\n            \"crews\": [\n                {\n                    \"id\": 4,\n                    \"name\": \"Liza\",\n                    \"family\": \"Russel\",\n                    \"role\": \"Screenwriter\",\n                    \"birthdate\": \"1981-07-20\",\n                    \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"updated_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"pivot\": {\n                        \"movie_id\": 6,\n                        \"crew_id\": 4\n                    }\n                },\n                {\n                    \"id\": 7,\n                    \"name\": \"Ashly\",\n                    \"family\": \"Block\",\n                    \"role\": \"Production Designer\",\n                    \"birthdate\": \"2006-10-15\",\n                    \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"updated_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"pivot\": {\n                        \"movie_id\": 6,\n                        \"crew_id\": 7\n                    }\n                },\n                {\n                    \"id\": 10,\n                    \"name\": \"Kailey\",\n                    \"family\": \"Gibson\",\n                    \"role\": \"Production Designer\",\n                    \"birthdate\": \"2023-06-22\",\n                    \"created_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"updated_at\": \"2024-01-25T11:03:35.000000Z\",\n                    \"pivot\": {\n                        \"movie_id\": 6,\n                        \"crew_id\": 10\n                    }\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
