@@ -8,6 +8,14 @@
 ### Models
 - Crew , Genre , Movie
 
+### DB Structure
+
+<div align="center">
+    <img src="../images/DBstructure.PNG" height="200">
+   
+</div>
+
+
 ### Api Functionalities
 - I used the **Repository Design Pattern**
 - You can find each model Repository in `app/Repositories`
