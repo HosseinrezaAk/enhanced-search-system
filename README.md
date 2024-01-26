@@ -41,6 +41,8 @@ php artisan db:seed --class=CrewTableSeeder
 php artisan db:seed --class=GenreTableSeeder
 php artisan db:seed --class=MovieTableSeeder
 ```
+
+For more Details go to `/projectFolder/Docs/Documents.md`
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an <a href="https://github.com/2x-Hra/enhanced-search-system/issues"> issue here </a> first
