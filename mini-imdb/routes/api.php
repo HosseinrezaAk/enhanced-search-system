@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CrewController;
 use App\Http\Controllers\GenreController;
+use App\Http\Controllers\MovieController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiResource('crews', CrewController::class);
 
 Route::apiResource('genres', GenreController::class);
+
+Route::apiResource('movies', MovieController::class);

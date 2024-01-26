@@ -16,16 +16,36 @@ class MovieRepository implements MovieRepositoryInterface
     }
     public function createMovie(array $movieData)
     {
-        return Movie::create($movieData);
+        $movie = Movie::create([
+            'title' => $movieData['title'],
+            'year' => $movieData['year'],
+            'rank' => $movieData['rank'],
+            'description' => $movieData['description'],
+            'genre_id' => $movieData['genre_id'],
+        ]);
+
+        $movie->crews()->attach($movieData['crew_ids']);
+        $movie->load('crews', 'genre');
+        return $movie;
     }
     public function getMovieById($movieId)
     {
-        return Movie::findOrFail($movieId);
+        $movie = Movie::findOrFail($movieId);
+        $movie->load('crews','genre');
+        return $movie;
     }
     public function updateMovie($movieId, array $movieData)
     {
         $movie = Movie::findOrFail($movieId);
+
         $movie->update($movieData);
+
+        if (isset($movieData['crew_ids'])) {
+            $movie->crews()->sync($movieData['crew_ids']);
+        }
+
+        $movie->load('crews', 'genre');
+
         return $movie;
     }
     public function deleteMovie($movieId)

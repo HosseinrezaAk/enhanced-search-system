@@ -16,6 +16,7 @@ class Movie extends Model
         'year',
         'rank',
         'description',
+        'genre_id',
     ];
 
     public function crews(): BelongsToMany
