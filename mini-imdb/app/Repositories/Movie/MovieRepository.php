@@ -68,6 +68,8 @@ class MovieRepository implements MovieRepositoryInterface
         }
 
         $query = Movie::query();
+
+        //filters
         if (isset($criteria['title'])) {
             $query->where('title', 'like', '%' . $criteria['title'] . '%');
         }
@@ -91,6 +93,18 @@ class MovieRepository implements MovieRepositoryInterface
         if (isset($criteria['year'])) {
             $query->where('year', '=', $criteria['year']);
         }
+
+        // Sorting
+        if (isset($criteria['sort_by'])) {
+            $sortField = $criteria['sort_by'];
+            $sortOrder = isset($criteria['sort_order']) && strtolower($criteria['sort_order']) === 'desc' ? 'desc' : 'asc';
+
+            $validSortFields = ['title', 'year', 'rank'];
+            if (in_array($sortField, $validSortFields)) {
+                $query->orderBy($sortField, $sortOrder);
+            }
+        }
+
         $query->with('genre', 'crews');
 
         $result = $query->get();
