@@ -20,7 +20,7 @@ robust backend module to enhance search functionality and improve performance us
 
  1- Clone the repository:
    ```sh
-   git clone https://github.com/your-username/your-repository.git
+   git clone https://github.com/2x-Hra/enhanced-search-system.git
    ```
 
 2- Install dependencies:
