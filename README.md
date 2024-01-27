@@ -14,7 +14,7 @@
 
 ## Introduction 
 
-robust backend module to enhance search functionality and improve performance using Redis caching and Elasticsearch indexing.
+robust backend module to enhance search functionality and improve performance using Redis caching and Elasticsearch indexing on mini IMDB project.
 
 ## Installation
 
